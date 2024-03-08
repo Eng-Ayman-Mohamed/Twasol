@@ -1,0 +1,9 @@
+const mongoose = require("mongoose");
+const config = require("config");
+const db = config.get("mongodb");
+
+const connectDB = async () => {
+  await mongoose.connect(db);
+  console.log("connected success");
+};
+module.exports = connectDB;
